@@ -7,11 +7,14 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 system = ExpertSystem()
 
+
 # Konfigurasi MySQL
-app.config['MYSQL_HOST'] = 'meowly13.mysql.database.azure.com'  # Ganti dengan host MySQL
+app.config['MYSQL_HOST'] = 'meowly13.mysql.database.azure.com'  # Ganti dengan hostname MySQL
+app.config['MYSQL_PORT'] = 3306  # Port untuk MySQL, biasanya 3306
 app.config['MYSQL_USER'] = 'admin13'  # Ganti dengan username MySQL
 app.config['MYSQL_PASSWORD'] = 'Kucing13'  # Ganti dengan password MySQL
 app.config['MYSQL_DB'] = 'db_meowly'  # Ganti dengan nama database MySQL
+
 
 app.secret_key = 'secretkey'
 
